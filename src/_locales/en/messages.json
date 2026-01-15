@@ -1,0 +1,612 @@
+{
+  "extName": {
+    "message": "Maktaba for Gemini",
+    "description": "The name of the extension shown in the web store and toolbar."
+  },
+  "extDesc": {
+    "message": "A local-first extension to organize, tag, and backup your Gemini chat sessions into folders.",
+    "description": "The extension description shown in the web store."
+  },
+  "extension_init_log": {
+    "message": "Maktaba for Gemini (Import/Export + Backups) Initialized",
+    "description": "Console log message when the extension initializes."
+  },
+  "context_invalidated_log": {
+    "message": "Context",
+    "description": "Console log message when the context is invalidated."
+  },
+  "settings_btn_title": {
+    "message": "Settings & Data",
+    "description": "Tooltip for the settings button."
+  },
+  "close_btn_title": {
+    "message": "Close",
+    "description": "Tooltip for the close panel button."
+  },
+  "maktaba_library_title": {
+    "message": "Maktaba Chat Library",
+    "description": "Main header title of the extension panel."
+  },
+  "settings_header": {
+    "message": "Data Management",
+    "description": "Header for the settings overlay."
+  },
+  "back_btn_label": {
+    "message": "← Back",
+    "description": "Label for the back button in settings."
+  },
+  "backup_restore_label": {
+    "message": "Backup & Restore (JSON)",
+    "description": "Section header for backup operations."
+  },
+  "download_backup_btn": {
+    "message": "⬇️ Download Backup",
+    "description": "Button to export data as JSON."
+  },
+  "restore_backup_btn": {
+    "message": "⬆️ Restore Backup",
+    "description": "Button to trigger JSON import."
+  },
+  "export_data_label": {
+    "message": "Export Data",
+    "description": "Section header for data export options."
+  },
+  "export_csv_btn": {
+    "message": "📊 Export to CSV",
+    "description": "Button to export data as CSV."
+  },
+  "copy_md_btn": {
+    "message": "📋 Copy as Markdown",
+    "description": "Button to copy data as Markdown."
+  },
+  "storage_health_label": {
+    "message": "Storage Health",
+    "description": "Section header for storage quota visualization."
+  },
+  "calculating_text": {
+    "message": "Calculating...",
+    "description": "Temporary text shown while storage usage is calculated."
+  },
+  "maintenance_label": {
+    "message": "Maintenance",
+    "description": "Section header for maintenance tasks."
+  },
+  "download_diag_btn": {
+    "message": "🛠️ Download Diagnostic Log",
+    "description": "Button to download diagnostic data."
+  },
+  "archive_unlinked_btn": {
+    "message": "📦 Archive Unlinked",
+    "description": "Button to move unlinked chats to a folder."
+  },
+  "prune_unlinked_btn": {
+    "message": "🧹 Prune Unlinked",
+    "description": "Button to delete unlinked chats."
+  },
+  "search_placeholder": {
+    "message": "Search... (e.g. #strategy -draft)",
+    "description": "Placeholder text for the search input field."
+  },
+  "search_syntax_title": {
+    "message": "Syntax Guide",
+    "description": "Tooltip for the search help button."
+  },
+  "help_row_term": {
+      "message": "<code>term</code> Contains text",
+      "description": "Help row for basic text search."
+    },
+    "help_row_tag": {
+      "message": "<code>#tag</code> Has tag",
+      "description": "Help row for tag search."
+    },
+    "help_row_exclude": {
+      "message": "<code>-term</code> Excludes text",
+      "description": "Help row for text exclusion."
+    },
+    "help_row_exclude_tag": {
+      "message": "<code>-#tag</code> Excludes tag",
+      "description": "Help row for tag exclusion."
+    },
+    "help_row_include_phrase": {
+      "message": "<code>\"a b\"</code> Includes phrase",
+      "description": "Help row for exact phrase inclusion."
+    },
+    "help_row_exclude_phrase": {
+      "message": "<code>-\"a b\"</code> Excludes phrase",
+      "description": "Help row for exact phrase exclusion."
+    },
+  "new_root_folder_btn": {
+    "message": "+ New Root Folder",
+    "description": "Button to create a new top-level folder."
+  },
+  "loading_state_text": {
+    "message": "Loading folders...",
+    "description": "Text shown while data is being retrieved."
+  },
+  "quick_save_btn": {
+    "message": "💾 Quick Save",
+    "description": "Button to open the quick save menu."
+  },
+  "quick_save_header": {
+    "message": "Save to...",
+    "description": "Header for the quick save menu."
+  },
+  "tags_input_placeholder": {
+    "message": "Tags (e.g. PortfolioA, ProjectX)",
+    "description": "Placeholder for the tags input field."
+  },
+  "note_input_placeholder": {
+    "message": "Note (optional)",
+    "description": "Placeholder for the annotation input field."
+  },
+  "cancel_btn": {
+    "message": "Cancel",
+    "description": "Generic cancel button text."
+  },
+  "filename_backup_prefix": {
+    "message": "maktaba_backup_",
+    "description": "Prefix for JSON backup file."
+  },
+  "filename_csv_prefix": {
+    "message": "maktaba_folders_export",
+    "description": "Prefix for CSV export."
+  },
+  "filename_diagnostic_prefix": {
+    "message": "maktaba_diagnostic_",
+    "description": "Prefix for diagnostic log file."
+  },
+  "confirm_overwrite_backup": {
+    "message": "This will overwrite your current folders. Are you sure?",
+    "description": "Alert confirming data overwrite during import."
+  },
+  "backup_restore_success": {
+    "message": "Backup restored successfully!",
+    "description": "Alert upon successful data import."
+  },
+  "invalid_backup_format": {
+    "message": "Invalid backup file format.",
+    "description": "Error alert for bad JSON structure."
+  },
+  "json_parse_error": {
+    "message": "Error parsing JSON file.",
+    "description": "Error alert when JSON cannot be parsed."
+  },
+  "csv_header_row": {
+    "message": "Folder Path,Chat Title,Gemini URL,Tags,Note\n",
+    "description": "Header row for the exported CSV file."
+  },
+  "md_export_header": {
+    "message": "# My Gemini Chats\n\n",
+    "description": "Title/Header for the exported Markdown content."
+  },
+  "copy_success_msg": {
+    "message": "Copied! ✅",
+    "description": "Temporary text on button after successful copy."
+  },
+  "pinned_searches_header": {
+    "message": "Pinned Searches",
+    "description": "Header for the pinned searches section."
+  },
+  "empty_folders_msg": {
+    "message": "No folders created yet.",
+    "description": "Message shown when the folder list is empty."
+  },
+  "diagnostic_unknown_offset": {
+    "message": "Unknown.",
+    "description": "Used as a fallback when for the timezone offset when unknown."
+  },
+  "unpin_btn": {
+    "message": "Unpin",
+    "description": "Name of button to unpin a search."
+  },
+  "unpin_confirm": {
+    "message": "Unpin \"$TITLE$\" from your dashboard?",
+    "description": "Confirmation to remove a pinned search.",
+    "placeholders": {
+      "title": {
+        "content": "$1",
+        "example": "Finance Drafts"
+      }
+    }
+  },
+  "symlink_menu_header": {
+    "message": "Locations for \"$TITLE$...\"",
+    "description": "Header for the multi-location context menu.",
+    "placeholders": {
+      "title": {
+        "content": "$1",
+        "example": "Project Alpha Plan"
+      }
+    }
+  },
+  "empty_search_results": {
+    "message": "No matching chats found.",
+    "description": "Message shown when search returns zero results."
+  },
+  "search_results_count": {
+    "message": "Found $COUNT$ results",
+    "description": "Header showing number of search matches.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "pin_search_btn": {
+    "message": "Pin",
+    "description": "Button to pin the current search query."
+  },
+  "pin_search_tooltip": {
+    "message": "Pin this search to top",
+    "description": "Tooltip for the pin search button."
+  },
+  "pin_exists_error": {
+    "message": "This search is already pinned!",
+    "description": "Alert when trying to pin a duplicate search."
+  },
+  "pin_limit_error": {
+    "message": "Limit reached: Maximum 5 pinned searches allowed for optimal focus.",
+    "description": "Alert when maximum pins are reached."
+  },
+  "pin_name_prompt": {
+    "message": "Name this pinned search (e.g. 'Urgent', 'Finance'):",
+    "description": "Prompt asking user to name a pinned search."
+  },
+  "new_subfolder_tooltip": {
+    "message": "New Subfolder",
+    "description": "Tooltip for the create subfolder button."
+  },
+  "save_current_chat_tooltip": {
+    "message": "Save Current Chat",
+    "description": "Tooltip for the add button on a folder."
+  },
+  "add_link_tooltip": {
+    "message": "Add Link",
+    "description": "Tooltip for manually adding a link."
+  },
+  "edit_note_tooltip": {
+    "message": "Add/Edit Note",
+    "description": "Tooltip for the edit note button."
+  },
+  "move_folder_tooltip": {
+    "message": "Move Folder",
+    "description": "Tooltip for the move folder button."
+  },
+  "view_contents_tooltip": {
+    "message": "View Contents",
+    "description": "Tooltip for the open folder button."
+  },
+  "delete_tooltip": {
+    "message": "Delete",
+    "description": "Tooltip for delete buttons."
+  },
+  "created_date_tooltip": {
+    "message": "Created: $DATE$",
+    "description": "Tooltip showing full creation date.",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "updated_date_tooltip": {
+    "message": "Updated: $DATE$",
+    "description": "Tooltip showing full update date.",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+    "rename_tooltip": {
+      "message": "Rename",
+      "description": "Tooltip for rename buttons."
+    },
+    "multi_location_tooltip": {
+      "message": "This chat is in $COUNT$ folders. Click to manage.",
+      "description": "Tooltip for chats that exist in multiple folders.",
+      "placeholders": {
+        "count": {
+          "content": "$1",
+          "example": "3"
+        }
+      }
+    },
+    "rename_chat_tooltip": {
+      "message": "Rename Chat",
+      "description": "Tooltip for the chat rename button."
+    },
+    "edit_tags_tooltip": {
+      "message": "Edit Tags",
+      "description": "Tooltip for the edit tags button."
+    },
+    "move_chat_tooltip": {
+      "message": "Move Chat",
+      "description": "Tooltip for the move chat button."
+    },
+    "remove_chat_tooltip": {
+      "message": "Remove Chat",
+      "description": "Tooltip for the remove chat button."
+    },
+    "storage_full_alert": {
+      "message": "⚠️ STORAGE FULL! ($USED$KB / 100KB)\n\nChanges cannot be saved. Please delete old folders or prune unlinked chats to free up space.",
+      "description": "Critical alert when Chrome sync storage is full.",
+      "placeholders": {
+        "used": {
+          "content": "$1",
+          "example": "99.5"
+        }
+      }
+    },
+    "save_error_alert": {
+      "message": "Save Error: $ERROR$",
+      "description": "Alert displaying a generic save error.",
+      "placeholders": {
+        "error": {
+          "content": "$1",
+          "example": "QuotaExceeded"
+        }
+      }
+    },
+    "context_invalidated_alert": {
+      "message": "Extension context invalidated. Please refresh the page.",
+      "description": "Alert when the extension disconnects/updates in the background."
+    },
+    "chat_id_error": {
+      "message": "Could not identify chat. Try refreshing the page.",
+      "description": "Error when URL parsing fails."
+    },
+    "chat_already_in_folder": {
+      "message": "This chat is already in this folder.",
+      "description": "Alert preventing duplicate saves in the same folder."
+    },
+    "add_tags_prompt": {
+      "message": "Add tags (comma separated)?",
+      "description": "Prompt asking for tags."
+    },
+    "already_saved_in_msg": {
+      "message": "\n(Already saved in: $FOLDERS$)",
+      "description": "Suffix for prompt showing where chat is currently saved.",
+      "placeholders": {
+        "folders": {
+          "content": "$1",
+          "example": "Work, Personal"
+        }
+      }
+    },
+    "add_note_prompt": {
+      "message": "Add a note? (optional)",
+      "description": "Prompt asking for a note."
+    },
+    "add_note_prompt_link": {
+      "message": "Note:",
+      "description": "Prompt asking for a note."
+    },
+    "paste_gemini_url_prompt": {
+      "message": "Paste Gemini URL:",
+      "description": "Prompt asking for a URL."
+    },
+    "invalid_url_alert": {
+      "message": "Invalid URL.",
+      "description": "Error alert for malformed URLs."
+    },
+    "folder_not_found_alert": {
+      "message": "Folder not found.",
+      "description": "Error alert when target folder is missing."
+    },
+    "name_chat_prompt": {
+      "message": "Name this chat:",
+      "description": "Prompt asking for a chat title."
+    },
+    "default_saved_link_title": {
+      "message": "Saved Link",
+      "description": "Default title for manually added links."
+    },
+    "tags_input_label": {
+      "message": "Tags (comma separated):",
+      "description": "Label text in prompts for tags."
+    },
+    "save_success_toast_multi": {
+      "message": "Saved! (Also in: $FOLDERS$)",
+      "description": "Toast message confirming save and listing other locations.",
+      "placeholders": {
+        "folders": {
+          "content": "$1",
+          "example": "Project X"
+        }
+      }
+    },
+    "delete_folder_confirm": {
+      "message": "Delete this folder?",
+      "description": "Confirmation prompt before deleting a folder."
+    },
+    "rename_folder_prompt": {
+      "message": "Rename Folder:",
+      "description": "Prompt to enter new folder name."
+    },
+    "rename_chat_global_prompt": {
+      "message": "Rename Chat (Global):",
+      "description": "Prompt to enter new chat title."
+    },
+    "edit_folder_note_prompt": {
+      "message": "Edit Folder Note:",
+      "description": "Prompt to edit folder annotation."
+    },
+    "edit_chat_note_prompt": {
+      "message": "Edit Chat Note:",
+      "description": "Prompt to edit chat annotation."
+    },
+    "edit_tags_prompt": {
+      "message": "Edit Tags:",
+      "description": "Prompt to edit chat tags."
+    },
+    "global_delete_confirm": {
+      "message": "Delete this chat globally from library?\nIt will be removed from: $FOLDERS$",
+      "description": "Confirmation for deleting a chat from all folders.",
+      "placeholders": {
+        "folders": {
+          "content": "$1",
+          "example": "Drafts, Archive"
+        }
+      }
+    },
+    "global_delete_simple_confirm": {
+      "message": "Delete this chat permanently from library?",
+      "description": "Confirmation for global delete when no other folders exist."
+    },
+    "last_folder_warning_confirm": {
+      "message": "This is the last folder containing this chat.\nRemoving it here will permanently delete the chat and its notes from your library.\n\nAre you sure?",
+      "description": "Warning when removing a chat from its last remaining location."
+    },
+    "untitled_chat_fallback": {
+      "message": "Untitled Chat",
+      "description": "Fallback title if none is found."
+    },
+    "new_subfolder_prompt": {
+      "message": "New Subfolder Name:",
+      "description": "Prompt for new subfolder name."
+    },
+    "new_root_folder_prompt": {
+      "message": "New Root Folder Name:",
+      "description": "Prompt for new root folder name."
+    },
+    "parent_folder_not_found_error": {
+      "message": "Parent folder not found.",
+      "description": "Error message when parent folder is missing."
+    },
+    "sort_menu_header": {
+      "message": "Sort By...",
+      "description": "Header for sort options menu."
+    },
+    "sort_last_updated": {
+      "message": "Last Updated",
+      "description": "Sort option label."
+    },
+    "sort_date_added": {
+      "message": "Date Added",
+      "description": "Sort option label."
+    },
+    "sort_alpha": {
+      "message": "Name (A-Z)",
+      "description": "Sort option label."
+    },
+    "back_tooltip": {
+      "message": "Back to folders",
+      "description": "Tooltip for back button in folder view."
+    },
+    "sort_order_btn_tooltip": {
+      "message": "Sort Order: $ORDER$",
+      "description": "Tooltip for sort button.",
+      "placeholders": {
+        "order": {
+          "content": "$1",
+          "example": "alpha"
+        }
+      }
+    },
+    "empty_subfolder_msg": {
+      "message": "This folder is empty.",
+      "description": "Message shown in empty subfolders."
+    },
+    "move_to_menu_header": {
+      "message": "Move to...",
+      "description": "Header for move chat context menu."
+    },
+    "no_folders_available": {
+      "message": "No other available folders",
+      "description": "Text when move menu has no targets."
+    },
+    "move_folder_menu_header": {
+      "message": "Move Folder...",
+      "description": "Header for move folder context menu."
+    },
+    "make_root_folder_action": {
+      "message": "↖ Make Root Folder",
+      "description": "Action item to move a folder to root."
+    },
+    "no_targets_available": {
+      "message": "No other targets",
+      "description": "Text when move folder menu has no targets."
+    },
+    "open_chat_first_alert": {
+      "message": "Open a chat first!",
+      "description": "Alert when trying to quick save without an active chat."
+    },
+    "saved_status_indicator": {
+      "message": "(Saved)",
+      "description": "Indicator text next to folders in quick save menu."
+    },
+    "storage_used_text": {
+      "message": "$USED$ KB / 100 KB used",
+      "description": "Text displaying current storage usage.",
+      "placeholders": {
+        "used": {
+          "content": "$1",
+          "example": "50.5"
+        }
+      }
+    },
+    "prune_confirm": {
+      "message": "Found $COUNT$ unlinked chats (saved data not in any folder). Delete them to free up space?",
+      "description": "Confirmation to delete unlinked chats.",
+      "placeholders": {
+        "count": {
+          "content": "$1",
+          "example": "12"
+        }
+      }
+    },
+    "prune_success_alert": {
+      "message": "Removed $COUNT$ unlinked.",
+      "description": "Success alert after pruning.",
+      "placeholders": {
+        "count": {
+          "content": "$1",
+          "example": "12"
+        }
+      }
+    },
+    "system_clean_alert": {
+      "message": "System is clean. No unlinked chats found.",
+      "description": "Alert when archiving finds nothing to archive or prune."
+    },
+    "archive_confirm": {
+      "message": "Found $COUNT$ unlinked chats. Move them to a new 'Recovered' folder?",
+      "description": "Confirmation to move unlinked chats to a folder.",
+      "placeholders": {
+        "count": {
+          "content": "$1",
+          "example": "12"
+        }
+      }
+    },
+    "recovered_folder_name": {
+      "message": "Recovered ($DATE$)",
+      "description": "Default name for the recovery folder.",
+      "placeholders": {
+        "date": {
+          "content": "$1",
+          "example": "2023-01-01"
+        }
+      }
+    },
+    "recovered_folder_annotation": {
+      "message": "Automatically recovered unlinked chats.",
+      "description": "Annotation for the recovery folder."
+    },
+    "archive_success_alert": {
+      "message": "Success! Created folder \"$NAME$\" with $COUNT$ chats.",
+      "description": "Success alert after archiving.",
+      "placeholders": {
+        "name": {
+          "content": "$1",
+          "example": "Recovered (2023-01-01)"
+        },
+        "count": {
+          "content": "$2",
+          "example": "12"
+        }
+      }
+    }
+  }
