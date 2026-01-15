@@ -4,6 +4,10 @@ Status: Accepted
 
 LLM translation to be tested
 
+## Summary
+
+In the context of expanding Maktaba for Gemini to a global audience facing storage, security, and translation cost constraints, we decided for the native Chrome i18n framework with AI-assisted static localization to achieve scalable, quota-free internationalization accepting increased maintenance overhead when adding new strings.
+
 ## Context
 
 Maktaba for Gemini currently uses hardcoded English strings within its UI rendering logic. To expand the user base and provide a native experience for non-English speakers, the extension must be adapted for global use.
