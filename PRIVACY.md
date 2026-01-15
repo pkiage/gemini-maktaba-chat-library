@@ -1,6 +1,6 @@
 # Privacy Policy for Maktaba
 
-**Effective Date:** [Insert Today's Date]
+**Effective Date:** 15-Jan-2026
 
 ## 1. Data Collection and Usage
 
@@ -17,7 +17,7 @@ The Extension stores your data (folder structures, tags, chat titles, and notes)
 
 ## 3. Permissions
 
-* **Host Permissions:** The extension accesses `https://gemini.google.com/*` strictly to inject the sidebar interface and read the metadata (Title and URL) of the chats you explicitly choose to save. It does not read the content of your conversations unless you export them.
+* **Host Permissions:** The extension accesses `https://gemini.google.com/*` strictly to inject the sidebar interface and read the metadata (Title and URL) of the chats you explicitly choose to save. It never accesses, reads, or stores the actual text content of your messages or the AI's responses.
 * **Storage:** Used solely to save your organization preferences locally on your device.
 
 ## 4. Third-Party Services
