@@ -10,13 +10,10 @@ In the context of syncing chat metadata across devices facing strict 100KB stora
 
 The Maktaba for Gemini extension requires a mechanism to persist folder structures, chat metadata, and user preferences across multiple devices without incurring server-side infrastructure costs or compromising user privacy. The extension is bound by the following constraints:
 
-External Constraint: chrome.storage.sync provides free, Google-encrypted cross-device synchronization but imposes a strict 100KB (102,400 bytes) total quota for all data.
-
-Privacy Requirement: The architecture must remain "local-first," ensuring no chat content is sent to third-party servers.
-
-Scalability: Users may have hundreds of chats across numerous folders, making a flat data structure inefficient as it would quickly exceed the byte limit.
-
-Observability: Debugging data and logs are needed for maintenance, but they compete for the same limited 100KB storage space.
+- **External Constraint**: chrome.storage.sync provides free, Google-encrypted cross-device synchronization but imposes a strict 100KB (102,400 bytes) total quota for all data.
+- **Privacy Requirement**: The architecture must remain "local-first," ensuring no chat content is sent to third-party servers.
+- **Scalability**: Users may have hundreds of chats across numerous folders, making a flat data structure inefficient as it would quickly exceed the byte limit.
+- **Observability**: Debugging data and logs are needed for maintenance, but they compete for the same limited 100KB storage space.
 
 ## Decision
 

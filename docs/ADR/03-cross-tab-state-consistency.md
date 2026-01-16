@@ -4,7 +4,7 @@ Status: Accepted
 
 ## Summary
 
-In the context of multi-tab state management facing race conditions and stale data risks, we decided for an Event-Driven Reactive model with Deep Equality Checks to achieve instant cross-tab consistency, accepting the downside of CPU overhead during JSON serialization.
+In the context of multi-tab state management facing race conditions and stale data risks, we decided for an event-driven reactive model with deep equality Checks to achieve instant cross-tab consistency, accepting the downside of CPU overhead during JSON serialization.
 
 ## Context
 
@@ -22,7 +22,7 @@ We will implement an Observer-based Reactive Pattern combined with Serialization
 
 - **Storage Change Listener**: Every tab implements chrome.storage.onChanged to monitor the sync namespace. When a change is detected, the tab receives the newValue immediately.
 - **Serialization-Based Equality Check**: To prevent redundant rendering, the system performs a JSON.stringify comparison between the current local folderData and the incoming newData. The UI refreshes only if the data strings differ.
-Focus-Triggered Re-Sync: A window.focus listener is utilized to re-load data from storage whenever the user returns to a tab, serving as a fail-safe for missed background events.
+- **Focus-Triggered Re-Sync**: A window.focus listener is utilized to re-load data from storage whenever the user returns to a tab, serving as a fail-safe for missed background events.
 - **In-Memory Session Metrics**: A global window.maktabaStats object will track "renders" and "skips" to allow developers to monitor the efficiency of the equality-check logic via the diagnostic log.
 
 ## Alternatives Considered

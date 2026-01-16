@@ -31,7 +31,7 @@ We will adopt a "Least Privilege" Permission Strategy, strictly limiting manifes
 ### Positive
 
 - **Enhanced Trust**: Users see a minimal permission request prompt during installation.
-- **Store Compliance**: significantly reduces the likelihood of rejection during Chrome Web Store review.
+- **Store Compliance**: Significantly reduces the likelihood of rejection during Chrome Web Store review.
 - **Privacy Assurance**: The extension technically cannot access data outside the Gemini domain.
 
 ### Negative
