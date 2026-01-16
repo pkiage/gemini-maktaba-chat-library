@@ -12,13 +12,46 @@ Native AI interfaces default to a linear, chronological list with limited naviga
 
 - **📁 Project Structure:** Create nested folders to organize chats by context, not just date.
 - **🏷️ Tags & Notes:** Add searchable tags (`#strategy`) and annotation notes to any chat.
-- **🔍 Power Search:** Regex-based search with phrase exclusion support (`-"competitor analysis"`).
+- **🔍 Power Search:** Regex-based search with phrase exclusion support (`-"market analysis"`).
 - **🛡️ Local & Private:** All metadata is stored in your browser's `chrome.storage.sync`. No external servers.
 - **💾 Data Portable:** Export your library to **JSON** (backup), **CSV** (analysis), or **Markdown** (for Obsidian/Notion).
 
-## C. How it Works
+## C. Installation Guide
 
-### C.1. Saving Workflows
+### C.1. Manual Mode (Developer)
+
+1. Clone this repository.
+2. Navigate to chrome://extensions/ and enable Developer Mode.
+3. Click Load Unpacked and select the /src folder.
+4. Refresh Gemini to see the sidebar.
+
+### C.2. Chrome Web Store
+
+Link coming soon pending review.
+
+## D. Directory Structure
+
+```text
+├── .github/                # Issue templates and GitHub workflows
+├── docs/                   # Documentation
+│   ├── ADR/                # Architecture Decision Records
+│   └── Prompts/            # System prompts used for refactoring & i18n
+│   └── store_assets/       # Assets from Chrome Web Store and other platforms
+├── src/                    # Source code
+│   ├── _locales/           # i18n JSON files for internationalization
+│   ├── content.js          # Main logic interacting with the DOM
+│   ├── manifest.json       # Chrome Extension configuration
+│   └── styles.css          # UI styling
+├── CONTRIBUTING.md         # Guidelines for contributors
+├── LICENSE.md              # Software license
+├── PRIVACY.md              # Privacy policy
+├── CONTRIBUTING.md         # Guidelines for contributors
+└── README.md
+```
+
+## E. How it Works
+
+### E.1. Saving Workflows
 
 Maktaba provides three distinct ways to capture knowledge, depending on your workflow context.
 
@@ -36,7 +69,7 @@ flowchart LR
 
 <details> <summary><strong>View Detailed Logic (Quick Save, Folder +, Link Import)</strong></summary>
 
-#### C.1.1 Quick Save (Floating Button)
+#### E.1.1 Quick Save (Floating Button)
 
 Used when you are inside an active chat and want to save it without breaking flow.
 
@@ -52,7 +85,7 @@ flowchart TD
     G --> H[Chat appears in selected folder]
 ```
 
-#### C.1.2 Contextual Save (Folder '+')
+#### E.1.2 Contextual Save (Folder '+')
 
 Used when organizing from the sidebar and you want to add the current chat to a specific project.
 
@@ -65,9 +98,9 @@ flowchart TD
     E --> F[Chat appears in that folder]
 ```
 
-#### C.1.3 External Link Import (Folder '🔗')
+#### E.1.3 External Link Import (Folder '🔗')
 
-Used to add a chat URL (e.g., from a colleague or history) directly into a folder.
+Used to add a chat URL (e.g., from someone else or history) directly into a folder.
 
 ```mermaid
 flowchart TD
@@ -81,7 +114,7 @@ flowchart TD
 
 </details>
 
-### C.2. Data Safety & Management
+### E.2. Data Safety & Management
 
 Data integrity and portability is prioritized.
 
@@ -104,7 +137,7 @@ flowchart TD
     Decision -- Archive --> CreateFolder[Create 'Recovered' Folder] --> MoveUnlinked[Move Chats] --> SyncArch[Save]
 ```
 
-### C.3. Architecture: The Flyweight Pattern
+### E.3. Architecture: The Flyweight Pattern
 
 To navigate the [100KB](https://developer.chrome.com/docs/extensions/mv2/reference/storage) storage limit of chrome.storage.sync, a normalized schema is used. Chat metadata is decoupled from the folder tree, allowing a single chat to exist in multiple folders (symlinks) with zero data redundancy.
 
@@ -135,7 +168,7 @@ classDiagram
     AllChatsRepo "1" *-- "many" ChatMetadata : Stores
 ```
 
-### C.4. Real-Time Sync
+### E.4. Real-Time Sync
 
 We use an observer pattern on chrome.storage.onChanged. If you organize a chat in Tab A, Tab B updates instantly without a refresh across devices.
 
@@ -156,42 +189,16 @@ sequenceDiagram
     Note right of TabB: UI updates instantly
 ```
 
-## D. Directory Structure & Installation
-
-### D.1. Directory Structure
-
-```text
-├── .github/                # Issue templates and GitHub workflows
-├── docs/                   # Documentation
-│   ├── ADR/                # Architecture Decision Records
-│   └── Prompts/            # System prompts used for refactoring & i18n
-│   └── store_assets/       # Assets from Chrome Web Store and other platforms
-├── src/                    # Source code
-│   ├── _locales/           # i18n JSON files for internationalization
-│   ├── content.js          # Main logic interacting with the DOM
-│   ├── manifest.json       # Chrome Extension configuration
-│   └── styles.css          # UI styling
-├── CONTRIBUTING.md         # Guidelines for contributors
-└── README.md
-```
-
-### D.2. Manual Mode (Developer)
-
-1. Clone this repository.
-2. Navigate to chrome://extensions/ and enable Developer Mode.
-3. Click Load Unpacked and select the /src folder.
-4. Refresh Gemini to see the sidebar.
-
-#### D.3. Chrome Web Store
-
-Link coming soon pending review.
-
-### E. Support
+## F. Support
 
 > - **Have questions?** Check the **[Frequently Asked Questions (FAQs)](docs/FAQs.md)** for details on storage limits and privacy.
 > - **Found a bug or have an idea?** Navigate to the Issues tab and select one of the templates (Bug Report or Feature Request) then share your feedback.
 > - **Want to contribute?** See **[CONTRIBUTING.md](CONTRIBUTING.md)** and review the Architecture Decision Records in `docs/ADR`.
 
 LLM translation of message.json ongoing
+
+## G. License
+
+[MIT License.md](LICENSE.md)
 
 Code and Docs made with [Gemini](https://gemini.google.com/)
