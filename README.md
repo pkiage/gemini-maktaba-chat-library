@@ -61,7 +61,7 @@ flowchart LR
     A1[Quick Save Button] --> B1[Show Folder List]
     A2[Folder '+' Button] --> B2[Directly Select Target Folder]
     A3[Link Import Button] --> B3[Prompt for Gemini URL]
-    
+
     B1 & B2 & B3 --> C{Already Saved?}
     C -- Yes --> D[Update Existing Metadata]
     C -- No --> E[Create New Entry]
@@ -123,7 +123,7 @@ flowchart TD
     Action{Select Action}
     
     %% Portability
-    Action -- Export JSON --> GenJSON[Generate Full State JSON] --> DownJSON[Download Backup]
+    Action -- Export JSON --> GenJSON[Generate Full State JSON] --> DownJSON[Export Backup]
     Action -- Import JSON --> ReadFile[Read File] --> ParseJSON{Valid Schema?}
     ParseJSON -- Yes --> Overwrite[Overwrite Local Data] --> Sync[Save & Sync]
     ParseJSON -- No --> AlertErr[Alert Error]

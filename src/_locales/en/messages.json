@@ -40,11 +40,11 @@
     "description": "Section header for backup operations."
   },
   "download_backup_btn": {
-    "message": "⬇️ Download Backup",
+    "message": "⬇️ Export Backup",
     "description": "Button to export data as JSON."
   },
   "restore_backup_btn": {
-    "message": "⬆️ Restore Backup",
+    "message": "⬆️ Import Backup",
     "description": "Button to trigger JSON import."
   },
   "export_data_label": {
