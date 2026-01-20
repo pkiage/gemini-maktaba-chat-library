@@ -156,7 +156,7 @@ function renderRightSidebar() {
     if (document.getElementById('maktaba-right-panel')) return;
 
     const panel = document.createElement('div');
-    const iconUrl = chrome.runtime.getURL('icon.svg');
+    const iconUrl = chrome.runtime.getURL('icon_png/icon48.png');
     panel.id = 'maktaba-right-panel';
     panel.innerHTML = `
         <div class="panel-header">

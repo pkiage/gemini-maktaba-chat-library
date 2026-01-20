@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extName__",
-  "version": "1.0.0",
+  "version": "1.0.1", 
   "description": "__MSG_extDesc__",
   "default_locale": "en",
   "icons": {
@@ -30,12 +30,16 @@
     }
   ],
   "action": {
-    "default_icon": "icon.svg",
+    "default_icon": {
+      "16": "icon_png/icon16.png",
+      "32": "icon_png/icon32.png",
+      "48": "icon_png/icon48.png"
+    },
     "default_title": "__MSG_extName__"
   },
   "web_accessible_resources": [
     {
-      "resources": ["icon.svg"],
+      "resources": ["icon_png/icon48.png"],
       "matches": ["https://gemini.google.com/*"]
     }
   ]
