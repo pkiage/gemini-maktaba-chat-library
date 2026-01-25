@@ -67,8 +67,6 @@ flowchart LR
     C -- No --> E[Create New Entry]
 ```
 
-<details> <summary><strong>View Detailed Logic (Quick Save, Folder +, Link Import)</strong></summary>
-
 #### E.1.1 Quick Save (Floating Button)
 
 Used when you are inside an active chat and want to save it without breaking flow.
@@ -111,8 +109,6 @@ flowchart TD
     D --> E[Save chat]
     E --> F[Chat appears in that folder]
 ```
-
-</details>
 
 ### E.2. Data Safety & Management
 
